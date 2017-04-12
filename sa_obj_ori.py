@@ -37,9 +37,13 @@ def get_answer():
 def print_out(radius, height, surface_area):	
 	print(str(radius) + '\t' + str(height.replace("\n","")) + '\t%.2f' % surface_area)
 
-
+def goodbye():
+	print()
+	print("Alez! Tata! Lukim yu!")
+	
 def main():
-	ans='y'
+	ans = get_answer()
+	
 	while (ans=='y') or (ans=='Y'):
 		fname = confirm_file()
 
@@ -55,9 +59,9 @@ def main():
 
 			print_out(radius, height, surface_area)
 		
-		ans=get_answer()
+		ans = get_answer()
 
-	print("Alez! Tata!")
+	goodbye()
 
 
 main()
